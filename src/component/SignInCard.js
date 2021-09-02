@@ -1,20 +1,58 @@
 import React from 'react';
 import tachyons from 'tachyons';
 
-const SignInCard = () => {
-    return (
-        <section class="tc pa3 pa5-ns">
-            <article class="hide-child relative ba b--black-20 mw5 center">
-                <img src="https://scontent.flhr3-1.fna.fbcdn.net/v/t1.0-1/p320x320/10419949_10105372167674736_5929675618317299881_n.jpg?oh=fa3bbf4311e61e4637b67ef3be89479f&oe=58C28705" class="db" alt="Photo of Jesse Grant" />
-                <div class="pa2 bt b--black-20">
-                <a class="f6 db link dark-blue hover-blue" href="#">Jesse Grant</a>
-                <p class="f6 gray mv1">5 mutual friends</p>
-                <a class="link tc ph3 pv1 db bg-animate bg-dark-blue hover-bg-blue white f6 br1" href="#">Add Friend</a>
-                </div>
-                <a class="child absolute top-1 right-1 ba bw1 black-40 grow no-underline br-100 w1 h1 pa2 lh-solid b" href="#">×</a>
-            </article>
-        </section>
-    )
+
+class SignInCard extends React.Component {
+    render() {
+        const mystyle = {
+            width: "100%",
+            border: "0",
+            borderBottom: "2px solid white",
+            outline: "0",
+            fontSize: "1.3rem",
+            color: "white",
+            padding: "7px 0",
+            background: "transparent",
+        };
+
+        return (
+            <div class=" br4 w6 mw6 bg-blue tc pv4 ph4 avenir">
+                
+                <form class="w-80 mw6 center">
+                    <label class="db b f1 measure white" >Sign Up</label>
+                    <label class="db b f4 measure white pv1" >It's Free</label>
+                    
+                    <div class='db pv2'>
+                        <label class='db tl f5 white' >First Name:</label>
+                        <input style={mystyle} type="name" name="name"/>
+                    </div>
+                    <div class='db pv2'>
+                        <label class='db tl f5 white' >Last Name:</label>
+                        <input style={mystyle} type="name" name="name"/>
+                    </div>
+                    <div class='db pv2'>
+                        <label class='db tl f5 white' >Email Address:</label>
+                        <input style={mystyle} type="email" name="email"/>
+                    </div>
+                    <div class='db pv2'>
+                        <label class='db tl f5 white' >Password:</label>
+                        <input style={mystyle} type="password" name="password"/>
+                    </div>
+                    <div class='db pv2'>
+                        <label class='db tl f5 white' >Password Verify:</label>
+                        <input style={mystyle} type="password" name="password2"/>
+                    </div>
+                    <div className="pt3">
+                        
+                    </div>
+                    <div className="pt3">
+                        <a className="br-pill pv2 ph4 bg-orange pointer white link b">Register</a>
+                    </div>
+                    
+                </form>
+            </div>
+        );
+    }
 }
 
 export default SignInCard;
